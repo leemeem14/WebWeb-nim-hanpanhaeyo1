@@ -6,9 +6,11 @@
     <title>Document</title>
     <style>
     body{
-        background-image: url('img/bg1.jpg');
+        background-image: url('img/bg1.jpg'), url('img/bg2.png');
         background-repeat:no-repeat;
-        background-size: 100%;
+        background-size:100% 350%, 50% 500px;
+        background-attachment: fixed;
+        background-position: bottom right, top center;
     }#box{
         display: inline-block;
         background-color: red;
