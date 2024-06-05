@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let date = new Date();
+        let hours = date.getHours();
+        let results = "";
+
+        if (hours<5){
+            results="잠을 더 자라.";
+        } else if (hours < 7){
+            results="등교 준비를 해라.";
+        }else if (hours < 9){
+            results="등교를 해라.";
+        }else if (hours < 12){
+            results="오전수업을 들어라.";
+        }else if (hours < 14){
+            results="밥을 먹어라.";
+        } else {results="오후수업듣고 집에 가라."}
+        alert(results);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
