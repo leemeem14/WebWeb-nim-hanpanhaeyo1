@@ -1,0 +1,34 @@
+<html><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>setInterval 연습</title>
+	<script type="text/javascript">
+		let span = null;
+		function init(){
+			span = document.getElementById("s1");
+			timerId = setInterval("doRotate()", 200);
+		}
+		function doRotate(){
+			let str = span.innerHTML;
+			let firstChar = str.substr(0, 1);
+			let remains = str.substr(1, str.length-1);
+			str = remains + firstChar;
+			span.innerHTML = str;
+		}
+		function stopTimer(){
+			clearInterval(timerId);
+		}
+		
+		
+
+	</script>
+</head>
+<body onload="init()">
+	<h2>여기 왔으나 보여줄건 없고 이거 보고 웹페이지 고르러 가십쇼.</h2>
+	<hr>
+	<h2>이거 클릭하면 멈추니까 만약 멈췄다면 새로고침 하십쇼.</h2>
+	<div>
+		<span id="s1" style="background-color: lavender;" onclick="stopTimer()">겉표지보다 큰 몇 향수류</span>
+	</div>
+
+</body></html>
