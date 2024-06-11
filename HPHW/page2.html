@@ -1,12 +1,18 @@
 <html><head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>setInterval 연습</title>
+	<title>타이틀 정하기 귀찮아요.</title>
+	<style>
+      body{
+		background-color: blanchedalmond;
+		
+	  }
+	</style>
 	<script type="text/javascript">
 		let span = null;
 		function init(){
 			span = document.getElementById("s1");
-			timerId = setInterval("doRotate()", 200);
+			timerId = setInterval("doRotate()", 300);
 		}
 		function doRotate(){
 			let str = span.innerHTML;
@@ -18,9 +24,6 @@
 		function stopTimer(){
 			clearInterval(timerId);
 		}
-		
-		
-
 	</script>
 </head>
 <body onload="init()">
