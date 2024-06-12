@@ -4,7 +4,7 @@
 	<title>타이틀 정하기 귀찮아요.</title>
 	<style>
       body{
-		background-color: blanchedalmond;
+		background-color: aqua;
 		
 	  }
 	</style>
@@ -24,14 +24,23 @@
 		function stopTimer(){
 			clearInterval(timerId);
 		}
+		function move(){
+            let mov = document.getElementById("mov");
+    let url = mov.options[mov.selectedIndex].value;
+    window.open(url, '_blank');
+        }
 	</script>
 </head>
 <body onload="init()">
 	<h2>여기 왔으나 보여줄건 없고 이거 보고 웹페이지 고르러 가십쇼.</h2>
 	<hr>
-	<h2>이거 클릭하면 멈추니까 만약 멈췄다면 새로고침 하십쇼.</h2>
+	<h2>이거 돌아가는글자 클릭하면 멈추니까 만약 멈췄다면 새로고침 하시거나 다른 페이지로 돌아가십쇼.</h2>
 	<div>
-		<span id="s1" style="background-color: lavender;" onclick="stopTimer()">겉표지보다 큰 몇 향수류</span>
+		<span id="s1" style="background-color: gray;" onclick="stopTimer()">겉표지보다 큰 몇 향수류</span>
 	</div>
-
+	<select  id="mov">
+        <option value="C:\Users\AISW-510-124\Desktop/HPHW/page1.html">첫 페이지?</option><!--AISW-510-124부분에 자기가 실행할 컴퓨터 유저이름넣기! 안하면 실행X-->
+		<option value="C:\Users\AISW-510-124\Desktop/HPHW/page3.html">3번째 페이지?</option><!--AISW-510-124부분에 자기가 실행할 컴퓨터 유저이름넣기! 안하면 실행X-->
+    </select>
+	<button onclick="move()">선택한 페이지로 이동!</button>
 </body></html>

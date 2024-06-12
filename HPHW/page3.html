@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>취미..?</title>
 </head>
+<script>function move(){
+    let mov = document.getElementById("mov");
+let url = mov.options[mov.selectedIndex].value;
+window.open(url, '_blank');
+}</script>
 <style>
 h1{
     font-size: 40pt;
@@ -12,10 +17,10 @@ h1{
 body{
     background-color: bisque;
 }
+
 </style>
 <body>
     <h1>핸드폰에서 가져온 제 취미와 관련된 사진들입니다.</h1>
-    <img src="img/KakaoTalk_20240611_132807030.jpg" width="33%", height="8%">
     <img src="img/KakaoTalk_20240611_132807030_01.jpg"  width="33%", height="8%">
     <img src="img/KakaoTalk_20240611_132807030_02.jpg"  width="33%", height="8%">
     <img src="img/KakaoTalk_20240611_132807030_03.jpg"  width="33%", height="8%">
@@ -27,5 +32,10 @@ body{
     <img src="img/KakaoTalk_20240611_132807030_09.jpg" width="33%", height="8%">
     <img src="img/KakaoTalk_20240611_132807030_10.jpg" width="33%", height="8%">
     <img src="img/KakaoTalk_20240611_132807030_11.jpg" width="33%", height="8%">
+    <select  id="mov">
+		<option value="C:\Users\AISW-510-124\Desktop/HPHW/page1.html">첫페이지로?</option><!--AISW-510-124부분에 자기가 실행할 컴퓨터 유저이름넣기! 안하면 실행X-->
+        <option value="C:\Users\AISW-510-124\Desktop/HPHW/page2.html">2번째 페이지로?</option><!--AISW-510-124부분에 자기가 실행할 컴퓨터 유저이름넣기! 안하면 실행X-->
+    </select>
+    <button onclick="move()">선택한 페이지로 이동</button>
 </body>
 </html>
