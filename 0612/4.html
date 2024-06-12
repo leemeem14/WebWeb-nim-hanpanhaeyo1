@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function anoncallten(fun){
-            for(i=0; i<10; i++){
+        function anoncallten(fun,n){
+            for(i=0; i<n; i++){
                 fun(i+1);
             }
         }
+        
         let fun = function(i){
             alert("익명함수호출됨"+ i);
         };
-        anoncallten(fun);
+        let n =parseInt(prompt("반복회수를 정수로 입력",10));
+        anoncallten(fun,n);
     </script>
 </head>
 <body>
