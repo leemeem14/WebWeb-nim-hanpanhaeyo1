@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changeObject(){
+            let objs = document.querySelectorAll("h1");
+            for(let i = 0; i < objs.length; i++){
+            objs[i].style.color='orange';
+            objs[i].style.background='gray';
+            objs[i].innerHTML = '서울정수캠퍼스 신입생';
+            }
+            // obj.style.color='orange';
+            // obj.style.background='gray';
+            // obj.innerHTML = '서울정수캠퍼스 신입생';
+        }
+    </script>
+</head>
+<body onload="changeObject()">
+    <h1>KOPO</h1>
+    <h1 id="Campus">SEOUL JungSu Campus 1st grade</h1>
+    <h1>AISW</h1>
+</body>
+</html>
