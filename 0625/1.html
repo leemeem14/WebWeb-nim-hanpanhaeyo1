@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function callbacktest(color){
+            document.body.style.backgroundColor = color;
+            alert('H e L l O');
+        }
+        function originalBackground(color){
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+</head>
+<!-- 인라인모델을 이용한 이벤트처리 -->
+<body>
+    <button onclick="callbacktest('yellow')">메세지 호출</button>
+    <button onclick="originalBackground('white')">back to white</button>
+</body>
+</html>
